@@ -7,7 +7,8 @@ class ccgrepo::yum(
   ) {
 
   # fixme: createrepo in common::source
-  $packages = ['createrepo', 'procmail']
+  #$packages = ['createrepo', 'procmail']
+  $packages = ['procmail']
 
   package {$packages: ensure => present }
 
