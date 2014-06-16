@@ -6,7 +6,7 @@ class ccgrepo::reprepro(
   $version='4.13.1',
   ) {
 
-  $download_url = "http://alioth.debian.org/frs/download.php/file/3909/reprepro_${version}.orig.tar.gz"
+  $download_url = "http://ubuntu.mirror.serversaustralia.com.au/ubuntu/pool/universe/r/reprepro/reprepro_${version}.orig.tar.gz"
 
   $packages = ['zlib-devel', 'bzip2-devel', 'libarchive-devel', 'db4-devel', 'gpgme-devel', 'gpgme' ]
 
