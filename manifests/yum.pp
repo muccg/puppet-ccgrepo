@@ -1,11 +1,12 @@
 #
 class ccgrepo::yum(
   $owner,
-  $group,
   $base,
   $s3dest,
+  $group=$owner,
   ) {
 
+  # fixme: createrepo in common::source
   $packages = ['createrepo', 'procmail']
 
   package {$packages: ensure => present }

@@ -14,11 +14,6 @@ class ccgrepo::apt (
     mode   => '0755',
   }
 
-  file {$repodir:
-    ensure => directory,
-    owner  => $owner
-  }
-
   file {"${repodir}/conf/distributions":
     content => template('ccgrepo/apt/distributions.erb'),
     owner   => $owner,
