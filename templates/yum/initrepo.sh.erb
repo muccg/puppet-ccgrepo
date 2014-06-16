@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+while read repo
+do
+    mkdir -p ${repo}/CentOS/RPMS
+    lockfile ${repo}/lock
+    createrepo -s sha ${repo}
+    rm -f ${repo}/lock
+done < repos.txt
+
+touch .created

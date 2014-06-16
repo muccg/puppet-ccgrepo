@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+repo=$1
+
+if [[ -z "${repo}" ]]; then
+    echo "usage: $0 REPO"
+    exit 1
+fi
+
+LOCKFILE="${repo}/lock"
+echo "Getting lock on ${LOCKFILE}"
+lockfile ${LOCKFILE}
+echo "Lock acquired, updating repo"
+createrepo --update -s sha "${repo}"
+STATUS=$?
+echo "Removing ${LOCKFILE}."
+rm -f ${LOCKFILE}
+exit ${STATUS}

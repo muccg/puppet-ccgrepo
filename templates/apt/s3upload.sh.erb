@@ -1,0 +1,6 @@
+#!/bin/bash
+
+REPODIR=$(cd `dirname $0`; pwd)
+s3cmd sync --no-progress --recursive \
+      "--exclude=conf/*" "--exclude=tmp/*" "--exclude=*.sh" \
+      ${REPODIR}/ "<%=s3dest%>"
