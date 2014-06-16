@@ -14,9 +14,9 @@ ccgrepo=$(echo ${repo} | sed -e 's=^repo=ccg=')
 # upload everything, including new indexes
 s3cmd sync --no-progress --recursive \
       "--exclude=*.sh" "--exclude=*.txt" --exclude=.created \
-      ${repo}/ "<%=s3dest%>/${ccgrepo}/"
+      ${repo}/ "<%=@s3dest%>/${ccgrepo}/"
 
 #  # clobber anything we don't have locally
 #  s3cmd sync --no-progress --recursive --delete-removed \
 #        "--exclude=*.sh" "--exclude=*.txt" --exclude=.created \
-#        ${repo}/ "<%=s3dest%>/${ccgrepo}/"
+#        ${repo}/ "<%=@s3dest%>/${ccgrepo}/"
