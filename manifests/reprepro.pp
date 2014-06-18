@@ -7,7 +7,6 @@ class ccgrepo::reprepro(
   $version='4.13.1',
   ) {
 
-
   $packages = ['zlib-devel', 'bzip2-devel', 'libarchive-devel', 'db4-devel', 'gpgme-devel', 'gpgme' ]
 
   package {$packages: ensure => present }

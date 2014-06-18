@@ -1,5 +1,5 @@
 name         'muccg-ccgrepo'
-version      '0.0.1'
+version      '0.0.2'
 
 author       'Centre for Comparative Genomics'
 license      'GNU GPL Version 3'
