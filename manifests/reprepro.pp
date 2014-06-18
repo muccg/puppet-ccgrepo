@@ -1,6 +1,6 @@
 # installs the debian reprepro tool from source
 class ccgrepo::reprepro(
-  $download_url = "http://ubuntu.mirror.serversaustralia.com.au/ubuntu/pool/universe/r/reprepro/reprepro_4.13.1.orig.tar.gz"
+  $download_url = "http://ubuntu.mirror.serversaustralia.com.au/ubuntu/pool/universe/r/reprepro/reprepro_4.13.1.orig.tar.gz",
   $owner='root',
   $group='root',
   $prefix='/usr/local',
