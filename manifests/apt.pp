@@ -4,8 +4,8 @@ class ccgrepo::apt (
   $owner,
   $s3dest,
   $pubkey_template,
-  reprepro_download_url,
-  reprepro_version,
+  $reprepro_download_url,
+  $reprepro_version,
   ) {
 
   $repo_dirs = [ $repodir, "${repodir}/tmp", "${repodir}/conf", "${repodir}/incoming" ]
